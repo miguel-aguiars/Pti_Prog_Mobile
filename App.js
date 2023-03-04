@@ -1,7 +1,4 @@
-import {
-  Text,
-  View,
-  StyleSheet
+import {Text, View, StyleSheet, FlatList
 } from 'react-native';
 
 import CardProduto from './components/CardProduto'
@@ -10,7 +7,7 @@ import Constants from 'expo-constants';
 
 export default function App() {
 
-  const filme1 = {
+  const prod1 = {
     nome: "Beef Burger",
     emoji: "🔥",
     calorias: "70 calories",
@@ -20,7 +17,7 @@ export default function App() {
     }
   }
 
-  const filme2 = {
+  const prod2 = {
     nome: "Pancakes",
     emoji: "🔥",
     calorias: "60 calories",
@@ -38,16 +35,15 @@ export default function App() {
       styles.container
     } >
     <
-    CardProduto filme = {
-      filme1
+    CardProduto style = {
+      styles.prod1
+    }
+    prod = {
+      prod1
     }
     /> <
-    CardProduto filme = {
-      filme2
-    }
-    /> <
-    /View>
-
+    CardProduto style = {styles.prod2} prod = { prod2}/> ]
+    </View>
   );
 }
 
@@ -59,5 +55,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#eeeeee',
     padding: 8,
   },
+  prod2: {
+    flex: 1,
+  }
 
 });
